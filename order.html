@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Place an Order | Gloria's Catering</title>
+
+    <!-- Shared website styling -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="page-header">
+      <a href="index.html" class="logo-container">
+        <img
+          src="image/watermark-logo.png"
+          alt="Gloria's Catering Logo"
+          class="logo"
+        />
+      </a>
+
+      <span class="page-label">PLACE AN ORDER</span>
+    </header>
+
+    <!-- Main order page -->
+    <main class="services-container">
+      <!-- Page introduction -->
+      <section class="intro-section">
+        <span class="section-tag">LET'S GET YOU SOMETHING DELICIOUS</span>
+
+        <h1>Place Your Order<span class="red-dot">.</span></h1>
+
+        <div class="title-line"></div>
+
+        <p class="intro-text">
+          Tell us what you'd like, how much you need, and where you'd like your
+          order delivered. Fill in the details below to get started.
+        </p>
+      </section>
+
+      <!-- Order form -->
+      <section class="order-form-section">
+        <form id="orderForm">
+          <!-- Customer name -->
+          <div class="form-group">
+            <label for="customerName">Full Name</label>
+
+            <input
+              type="text"
+              id="customerName"
+              name="customerName"
+              placeholder="Enter your full name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <!-- Customer phone -->
+          <div class="form-group">
+            <label for="customerPhone">Phone Number</label>
+
+            <input
+              type="tel"
+              id="customerPhone"
+              name="customerPhone"
+              placeholder="Enter your phone number"
+              autocomplete="tel"
+              required
+            />
+          </div>
+
+          <!-- Product selection -->
+          <div class="form-group">
+            <label for="product">What Would You Like?</label>
+
+            <select id="product" name="product" required>
+              <option value="">Select a product</option>
+
+              <option value="Chin Chin">Chin Chin</option>
+
+              <option value="Doughnuts">Doughnuts</option>
+
+              <option value="Peanuts">Peanuts</option>
+
+              <option value="Egg Rolls">Egg Rolls</option>
+
+              <option value="Puff Puff">Puff Puff</option>
+
+              <option value="Buns">Buns</option>
+
+              <option value="Small Chops">Small Chops</option>
+
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Custom product name -->
+          <div class="form-group" id="customProductGroup" hidden>
+            <label for="customProduct">Specify Your Product</label>
+
+            <input
+              type="text"
+              id="customProduct"
+              name="customProduct"
+              placeholder="Enter the product you want"
+            />
+          </div>
+
+          <!-- Quantity -->
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              step="1"
+              placeholder="Enter quantity"
+              required
+            />
+
+            <small> Enter the number of packs, pieces, or units. </small>
+          </div>
+
+          <!-- Unit -->
+          <div class="form-group">
+            <label for="unit">Quantity Unit</label>
+
+            <select id="unit" name="unit" required>
+              <option value="">Select a unit</option>
+
+              <option value="packs">Packs</option>
+
+              <option value="pieces">Pieces</option>
+
+              <option value="bags">Bags</option>
+
+              <option value="boxes">Boxes</option>
+
+              <option value="servings">Servings</option>
+            </select>
+          </div>
+
+          <!-- Delivery address -->
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              placeholder="Enter your delivery address"
+              autocomplete="street-address"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Additional instructions -->
+          <div class="form-group">
+            <label for="notes"> Additional Instructions (Optional) </label>
+
+            <textarea
+              id="notes"
+              name="notes"
+              rows="3"
+              placeholder="Tell us about any special requests"
+            ></textarea>
+          </div>
+
+          <!-- Submit order -->
+          <button type="submit" class="nav-button submit-button">
+            Send Order
+
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+
+          <!-- Space for status messages -->
+          <p id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-line"></div>
+
+      <p class="copyright">
+        &copy; 2026 Gloria's Catering Services. All rights reserved.
+      </p>
+
+      <p class="developer-credit">
+        Made by <strong>CODEX Web and Design</strong>
+      </p>
+    </footer>
+
+    <!-- Order form JavaScript -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
